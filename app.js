@@ -2,12 +2,14 @@ import express from "express";
 import mongoose from "mongoose";
 import cors from "cors";
 import userRoutes from "./routes/userRoutes.js";
+import blogRoutes from "./routes/blogRoutes.js";
 
 const app = express();
 app.use(cors());
 app.use(express.json());
 
 app.use("/user", userRoutes);
+app.use("/blog", blogRoutes);
 
 mongoose
   .connect(
