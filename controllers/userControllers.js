@@ -29,6 +29,7 @@ const signUp = async (req, res, next) => {
       name,
       email,
       password: hashedPassord,
+      blogs : []
     });
     user.save();
 
